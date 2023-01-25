@@ -108,7 +108,7 @@ public class BaseUI {
 	public void closeBrowser() throws IOException {
 		fos = new FileOutputStream(file);
 		workbook.write(fos);
-		workbook.close();
+		//workbook.close();
 		driver.quit();
 	}
 
