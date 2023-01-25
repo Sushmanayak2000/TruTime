@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Main Project]">
+  <test thread-count="5" name="SeleniumTesting(failed)">
+    <classes>
+      <class name="TestSuites.trutime">
+        <methods>
+          <include name="invokeBrowser"/>
+          <include name="testCases"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- TestSuites.trutime -->
+    </classes>
+  </test> <!-- SeleniumTesting(failed) -->
+</suite> <!-- Failed suite [Main Project] -->
