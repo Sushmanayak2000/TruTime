@@ -33,6 +33,6 @@ public class AppTest extends BaseUI {
 	public void closeBrowser() throws IOException {
 		reportPass("Browser is closed successfuly");
 		tr.endReport();
-		tr.closeBrowser();
+		tr.quiteBrowser();
 	}
 }
