@@ -105,10 +105,10 @@ public class BaseUI {
 	}
 
 	// Method to close the Browser
-	public void closeBrowser() throws IOException {
+	public void quiteBrowser() throws IOException {
 		fos = new FileOutputStream(file);
 		workbook.write(fos);
-		//workbook.close();
+		workbook.close();
 		driver.quit();
 	}
 
