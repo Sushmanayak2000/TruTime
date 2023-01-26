@@ -20,7 +20,8 @@ public class TruTime extends BaseUI {
 	By icon = By.className("icomoon-search2");
 	By trutime = By.xpath("//span[contains(text(),'https://onecognizant.cognizant.com/?GlobalAppId=21')]");
 	By date = By.xpath("//div[@class='dayDetail ng-scope']/div[1]");
-
+	By OTP = By.xpath("//*[@id='idRichContext_DisplaySign']");
+	
 	public void login() {
 		logger = report.createTest("Login into Becognizant.");
 		try {
@@ -30,6 +31,9 @@ public class TruTime extends BaseUI {
 			wait(20, pass);
 			driver.findElement(pass).sendKeys(prop.getProperty("password"));
 			driver.findElement(next).click();
+			wait(20, OTP);
+			String OTP_Code = driver.findElement(OTP).getText();
+			System.out.println("The OTP : " + OTP_Code);
 			Thread.sleep(1000);
 			reportPass("Email and Password are verified sucessfully");
 			wait(120, yes);
